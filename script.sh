@@ -21,7 +21,7 @@ sudo apt-get update
 sudo apt-get upgrade 
 
 # Install packages
-sudo apt-get -y install debconf-utils less lsof screen vim git openerp
+sudo apt-get -y  --force-yes install debconf-utils less lsof screen vim git openerp
 
 # Configs
 rsync -av /vagrant/etc/ /etc/
