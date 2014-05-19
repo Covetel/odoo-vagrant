@@ -6,8 +6,6 @@ MIRROR_IP=10.0.2.2
 PORT=3142
 DEB_MIRROR=$MIRROR_HOSTNAME:$PORT
 
-
-
 # mirror ip address
 sudo echo "$MIRROR_IP $MIRROR_HOSTNAME" >> /etc/hosts
 
@@ -23,5 +21,5 @@ sudo apt-get upgrade
 # Install packages
 sudo apt-get -y  --force-yes install debconf-utils less lsof screen vim git openerp
 
-# Configs
-rsync -av /vagrant/etc/ /etc/
+sudo service openerp stop
+sudo update-rc.d -f openerp disable
