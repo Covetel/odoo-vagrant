@@ -19,6 +19,7 @@ wget http://mirror/files/deb/vagrant_1.6.2_x86_64.deb
 sudo dpkg -i vagrant_1.6.2_x86_64.deb
 ```
 1. Setup vagrant box.
+
 	```
 vagrant box add debian7 http://192.168.213.150/files/box/debian.box
 ```
