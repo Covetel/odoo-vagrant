@@ -32,6 +32,8 @@ $ cd odoo-vagrant
 $ mkdir ../addons
 ```
 
+1. Edit file `script.sh` and set `$MIRROR_IP` to your IP address mirror.
+
 1. Vagrant up
 
 	```

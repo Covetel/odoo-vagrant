@@ -1,8 +1,8 @@
 #!/bin/bash 
 
 # var definitions - change depending on your infrastructure
-MIRROR_HOSTNAME=mirror
 MIRROR_IP=10.0.2.2
+MIRROR_HOSTNAME=mirror
 PORT=3142
 DEB_MIRROR=$MIRROR_HOSTNAME:$PORT
 
