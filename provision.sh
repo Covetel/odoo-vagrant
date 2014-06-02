@@ -7,7 +7,7 @@ sudo adduser --system --quiet --gecos 'OpenERP' --group openerp
 sudo chown -R openerp:openerp /home/openerp
 
 sudo aptitude install -y postgresql-9.1
-sudo dpkg -i package/openerp_8.0dev-20140416-230101-1_all.deb
+sudo dpkg -i /vagrant/package/openerp_8.0dev-20140416-230101-1_all.deb
 sudo aptitude install -y openerp
 
 sudo apt-get install -y --force-yes git vim tmux less lsof openerp
