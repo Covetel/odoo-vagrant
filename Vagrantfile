@@ -5,7 +5,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  NAME = "autotech"
+  NAME = "odoo-dev"
     
   config.vm.define "odoo" do |odoo|
 
@@ -23,5 +23,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 #      config.vm.network "public_network", :bridge => 'en0: Ethernet'
   end
-
 end
