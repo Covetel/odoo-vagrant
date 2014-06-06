@@ -19,6 +19,13 @@ $ wget http://mirror/files/deb/vagrant_1.6.2_x86_64.deb
 $ sudo dpkg -i vagrant_1.6.2_x86_64.deb
 ```
 
+1. Download odoo debian package
+``` 
+$ cd odoo-vagrant
+$ wget -c http://nightly.openerp.com/trunk/nightly/deb/openerp_8.0dev-20140416-230101-1_all.deb
+$ mkdir package
+$ mv openerp_8.0dev-20140416-230101-1_all.deb package
+``` 
 1. Setup vagrant box.
 
 	```
