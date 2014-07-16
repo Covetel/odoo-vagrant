@@ -18,7 +18,11 @@ Setup
 $ wget http://mirror/files/deb/vagrant_1.6.2_x86_64.deb
 $ sudo dpkg -i vagrant_1.6.2_x86_64.deb
 ```
+1. Cloning Odoo repo
 
+```
+$ git clone -b 8.0 https://github.com/odoo/odoo.git --depth 1 
+```
 1. Setup vagrant box.
 
 	```
