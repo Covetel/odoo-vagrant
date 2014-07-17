@@ -1,6 +1,7 @@
 #!/bin/bash
 NAME=openerp-server
-DAEMON=/usr/bin/openerp-server
+#DAEMON=/usr/bin/openerp-server
+DAEMON=/opt/openerp/odoo/odoo.py
 CONFIG=/vagrant/etc/openerp/openerp-server.conf
 USER=openerp
 
