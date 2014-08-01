@@ -12,11 +12,12 @@ Dependencies
 Setup
 -----
 
-1. Download and install vagrant
+1. Download and install vagrant (inside COVETEL)
 
    ```
-$ wget http://mirror/files/deb/vagrant_1.6.2_x86_64.deb
+$ wget http://mirror/files/deb/vagrant_1.6.2_x86_64.deb || wget http://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
 $ sudo dpkg -i vagrant_1.6.2_x86_64.deb
+
 ```
 
 1. Setup vagrant box.
