@@ -33,16 +33,13 @@ $ vagrant box add debian7 http://192.168.213.150/files/box/debian.box || vagrant
 $ git clone https://github.com/Covetel/odoo-vagrant.git
 
    ```
-
 1. Create `addons` directory
 
-```
+   ```
 $ cd odoo-vagrant
 $ mkdir ../addons
-```
-
+   ```
 1. Edit file `script.sh` and set `$MIRROR_IP` to your IP address mirror.
-
 1. Vagrant up
 
    ```
