@@ -12,7 +12,7 @@ Dependencies
 Setup
 -----
 
-1. Download and install vagrant (inside COVETEL)
+1. Download and install vagrant (the OR based wget allows COVETEL people to get it from a local mirror)
 
    ```
 $ wget http://mirror/files/deb/vagrant_1.6.2_x86_64.deb || wget http://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
