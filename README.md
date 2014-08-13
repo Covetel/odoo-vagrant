@@ -12,6 +12,9 @@ Dependencies
 Setup
 -----
 
+1. Download and Install Ansible http://docs.ansible.com/intro_installation.html
+
+
 1. Download and install vagrant (the OR based wget allows COVETEL people to get it from a local mirror)
 
    ```
