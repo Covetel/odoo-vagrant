@@ -26,7 +26,7 @@ $ sudo dpkg -i vagrant_1.6.2_x86_64.deb
 1. Setup vagrant box.
 
    ```
-$ vagrant box add debian7 http://192.168.213.150/files/box/debian.box || vagrant box add debian7 http://iweb.dl.sourceforge.net/project/vagrantdebianboxes/debianwheezy.box
+$ vagrant box add debian7 http://iweb.dl.sourceforge.net/project/vagrantdebianboxes/debianwheezy.box
 
    ```
    
