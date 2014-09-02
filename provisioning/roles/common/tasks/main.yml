@@ -1,0 +1,16 @@
+ - name: clean repository list
+   replace: dest=/etc/apt/sources.list regexp='.*' replace='#' 
+
+ - name: adding repositories
+   apt_repository: repo='deb http://ftp.debian.org/debian/ wheezy main contrib non-free' state=present update_cache=yes
+
+ - name: base debian packages
+   apt: name={{ item }} state=present
+   with_items:
+     - sudo
+     - git
+     - screen
+     - less
+     - lsof
+     - unzip
+     - python-psycopg2

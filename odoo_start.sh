@@ -1,8 +1,7 @@
 #!/bin/bash
 NAME=openerp-server
-#DAEMON=/usr/bin/openerp-server
-DAEMON=/opt/openerp/odoo/odoo.py
-CONFIG=/vagrant/etc/openerp/openerp-server.conf
+DAEMON=/opt/odoo/openerp-server
+CONFIG=/etc/openerp/openerp-server.conf
 USER=openerp
 
 ARGS="$DAEMON --config $CONFIG --update=$1"

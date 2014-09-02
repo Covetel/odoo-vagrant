@@ -1,0 +1,4 @@
+run_git_clone: false
+server_name: dev.covetel.com.ve
+digitalocean: true
+createdb: true

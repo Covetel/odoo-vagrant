@@ -1,27 +1,37 @@
 # -*- mode: ruby -*-
-# vi: set ft=ruby :
 
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
 
+vms = {
+    "dev.covetel.com.ve" => "192.168.42.5",
+}
+
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  NAME = "odoo-dev"
-    
-  config.vm.define "odoo" do |odoo|
+  vms.each do | name, ip |
+    config.vm.define name do | machine |
+      machine.vm.box = "debian7"
+      machine.vm.box_check_update = false
+      machine.vm.network "private_network", ip: ip
+      machine.vm.hostname = name
 
-      odoo.vm.box = "debian7"
-      odoo.vm.host_name = NAME
+      # This sections fail in Debian Wheezy, please report and solve.
+      # Require nfs-kernel-server package in Debian
+      machine.nfs.map_uid = 0
+      machine.nfs.map_gid = 0
 
-      odoo.vm.provision :shell, :path => "script.sh"
-      odoo.vm.network :forwarded_port, host: 8069, guest: 8069 
-      odoo.vm.synced_folder "./odoo", "/opt/openerp/odoo"
-      odoo.vm.synced_folder "./addons", "/home/vagrant/addons"
+      machine.vm.synced_folder "../odoo", "/opt/odoo", nfs: true
+      machine.vm.synced_folder "./addons", "/home/odoo/.local/share/OpenERP/addons/7.saas~5", nfs: true
 
-      odoo.vm.provider "virtualbox" do |vb|
-        vb.customize ["modifyvm", :id, "--memory", "1024"]
-        vb.customize ["modifyvm", :id, "--name", NAME ]
+      machine.vm.provider "virtualbox" do |vb|
+        vb.customize ["modifyvm", :id, "--memory", "512"]
+        vb.customize ["modifyvm", :id, "--name", name ]
       end
 
-#      config.vm.network "public_network", :bridge => 'en0: Ethernet'
+      #machine.vm.provision "ansible" do |ansible|
+      #  ansible.playbook = "provisioning/odoo.yml"
+	  #  ansible.inventory_path = "provisioning/develop"
+      #end
+    end
   end
 end
