@@ -1,10 +1,14 @@
 #!/bin/bash
 
 # var definitions - change depending on your infrastructure
-MIRROR_IP=192.168.19.51
+MIRROR_IP=192.168.213.150
 MIRROR_HOSTNAME=mirror
 PORT=3142
 DEB_MIRROR=$MIRROR_HOSTNAME:$PORT
+
+# repositories
+sudo echo "deb http://mirror:3142/ftp.debian.org/debian/ wheezy main contrib non-free \
+deb http://mirror:3142/security.debian.org/ wheezy/updates main contrib non-free" > /etc/apt/sources.list
 
 # mirror ip address
 sudo echo "$MIRROR_IP $MIRROR_HOSTNAME" >> /etc/hosts
