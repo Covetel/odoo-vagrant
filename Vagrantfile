@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     
   config.vm.define "odoo" do |odoo|
 
-      odoo.vm.box = "debian75"
+      odoo.vm.box = "debian7"
       odoo.vm.host_name = NAME
 
       odoo.vm.provision :shell, :path => "script.sh"
