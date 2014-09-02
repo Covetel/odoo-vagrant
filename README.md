@@ -41,3 +41,8 @@ $ cd odoo-vagrant
 $ cd odoo-vagrant
 $ vagrant up
 ```
+
+1. Enter to Odoo with the following URL:
+```
+http://192.168.42.5:8069
+```
