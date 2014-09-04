@@ -28,10 +28,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         vb.customize ["modifyvm", :id, "--name", name ]
       end
 
-      #machine.vm.provision "ansible" do |ansible|
-      #  ansible.playbook = "provisioning/odoo.yml"
-	  #  ansible.inventory_path = "provisioning/develop"
-      #end
+      machine.vm.provision "ansible" do |ansible|
+        ansible.playbook = "provisioning/odoo.yml"
+	    ansible.inventory_path = "provisioning/develop"
+      end
     end
   end
 end
