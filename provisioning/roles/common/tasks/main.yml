@@ -1,6 +1,13 @@
  - name: clean repository list
    replace: dest=/etc/apt/sources.list regexp='.*' replace='#' 
 
+ - name: fix vagrant sudoers
+   replace: dest=/etc/sudoers regexp='vagrant ALL=NOPASSWD:ALL' replace='vagrant ALL=(ALL) NOPASSWD:ALL' 
+
+ - name: apt proxy config
+   copy: src=02aptproxy dest=/etc/apt/apt.conf.d/02aptproxy
+   when: aptproxy
+
  - name: adding repositories
    apt_repository: repo='deb http://ftp.debian.org/debian/ wheezy main contrib non-free' state=present update_cache=yes
 

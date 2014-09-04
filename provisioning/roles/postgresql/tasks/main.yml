@@ -12,5 +12,4 @@
 
  - name: Odoo postgresql user
    postgresql_user: name={{ odoo_user }} role_attr_flags=SUPERUSER state=present
-   sudo: yes
    sudo_user: postgres

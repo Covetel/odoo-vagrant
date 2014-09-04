@@ -1,4 +1,6 @@
   - hosts: odoo 
+    sudo: yes
+    remote_user: vagrant
     roles:
       - common
       - postgresql
