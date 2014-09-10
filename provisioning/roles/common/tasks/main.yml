@@ -21,3 +21,4 @@
      - lsof
      - unzip
      - python-psycopg2
+     - vim
