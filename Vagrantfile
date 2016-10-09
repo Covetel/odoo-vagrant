@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANT_VERSION) do |config|
     
     odoo.vm.synced_folder "../addons", "/home/vagrant/addons"
 
-    odoo.vm.box = "debian7"
+    odoo.vm.box = "debian/wheezy64"
     odoo.vm.host_name = "odoo-dev"
     
     odoo.vm.provider "virtualbox" do |vb|
